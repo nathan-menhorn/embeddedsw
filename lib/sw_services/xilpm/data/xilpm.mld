@@ -1,0 +1,15 @@
+###############################################################################
+# Copyright (c) 2015 - 2021 Xilinx, Inc.  All rights reserved.
+# SPDX-License-Identifier: MIT
+##############################################################################
+
+OPTION psf_version = 2.1;
+
+BEGIN LIBRARY xilpm
+  OPTION copyfiles = all;
+  OPTION REQUIRES_OS = (standalone freertos10_xilinx);
+  OPTION APP_LINKER_FLAGS = "-Wl,--start-group,-lxilpm,-lxil,-lgcc,-lc,--end-group";
+  OPTION desc = "Platform Management API Library for ZynqMP and Versal";
+  OPTION VERSION = 3.3;
+  OPTION NAME = xilpm;
+END LIBRARY
