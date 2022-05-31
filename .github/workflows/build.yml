@@ -30,6 +30,7 @@ jobs:
            cd $HOME
            git clone -b honister git://git.yoctoproject.org/poky.git
            cd poky
+           git clone -b honister git://git.yoctoproject.org/meta-xilinx
            source oe-init-build-env
       - name: Download and set up sonar-scanner
         env:
